@@ -1,0 +1,136 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: arial;
+}
+
+/* .parent{
+  position: relative;
+ width: 500px;
+ height: 500px;
+ background: #000;
+}
+
+.parent > .child{
+  position: absolute;
+ left: 10px;
+ bottom: 10px;
+  width: 400px;
+  height: 400px;
+  background: #f00;
+ } */
+
+.parent{
+  max-width: 400px;
+ border:2px solid black;
+padding: 15px;
+margin: 10% auto;
+position:relative;
+border-radius: 30px;
+overflow: hidden;
+
+}
+.parent > .info{
+/*  */
+display: flex;
+flex-flow: column;
+justify-content: center;
+align-items: center;
+  /*  */
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background: rgba(88, 26 ,28 , 0.5);
+ color: #ccc;
+ opacity: 0;
+transition: 0.8s;
+
+}
+
+.parent > .info > h4{
+font-size: 30px;
+}
+
+.parent > .info > p{
+font-size: 20px;
+text-align: center;
+margin: 15px 0;
+}
+
+.parent > .info > button{
+background: none;
+border: 2px solid #fff;
+padding: 15px 60px;
+color: whitesmoke;
+cursor: pointer;
+transition: 0.6s;
+}
+
+.parent > .info > button:hover{
+background: #fff;
+color: black;
+
+}
+
+.parent > .img{
+width: 100%;
+}
+
+.parent > .img > img{
+  width: 100%;
+}
+.parent:hover   > .info{
+opacity: 1;
+}
+nav{
+  position: fixed;
+  top: 0;
+ left: 0;
+ background: grey;
+ display:flex;
+ align-items: center;
+ min-height: 100px;
+ padding: 0 20px;
+ width: 100%;
+ z-index: 1;
+}
+  
+nav > ul > li{
+  display: inline-block;
+}
+
+
+
+
+
+
+nav> ul > li > a{
+  color:#ccc;
+ text-decoration: none;
+ margin: 0 10px;
+
+}
+ nav> ul > li > a:hover{
+ color: red;
+
+}
+ #some{
+
+  padding-top:  120px;
+ 
+}
+
+@media screen and (max-width:760px){
+  nav{
+   position: static;
+
+  }
+  #some{
+margin-top: 10px;
+padding-top: 0;
+
+  }
+}
